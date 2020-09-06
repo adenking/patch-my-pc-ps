@@ -1,3 +1,8 @@
+Write-Output "Installing Dependencies"
+$start_time = Get-Date
+Install-Module PSWindowsUpdate
+Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+
 $url = "https://patchmypc.com/freeupdater/PatchMyPC.exe"
 $output = "$PSScriptRoot\PatchMyPC.exe"
 $start_time = Get-Date
